@@ -1,0 +1,7 @@
+databaseChangeLog: #параметр в котором находятся миграции
+  - include: # список активных миграций
+      file: db/changelog/changeset/cs-20221229_schema_create-table-project.yaml # путь к файлу миграции
+  - include:
+      file: db/changelog/changeset/cs-20221229_schema_create-table-release.yaml
+  - include:
+      file: db/changelog/changeset/cs-20221229_schema_create-table-task.yaml

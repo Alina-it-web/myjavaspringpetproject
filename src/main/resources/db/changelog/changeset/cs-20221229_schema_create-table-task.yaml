@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-task
+      author: Karyukova Marina
+      changes:
+        - createTable:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: created_date
+                  type: TIMESTAMP
+              - column:
+                  name: description
+                  type: VARCHAR(255)
+              - column:
+                  name: id_release
+                  type: BIGINT
+              - column:
+                  name: id_user_creator
+                  type: BIGINT
+              - column:
+                  name: id_user_performer
+                  type: BIGINT
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: task_status
+                  type: INTEGER

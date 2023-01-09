@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-release
+      author: Karyukova Marina
+      changes:
+        - createTable:
+            tableName: release
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: begin_date
+                  type: TIMESTAMP
+              - column:
+                  name: end_date
+                  type: TIMESTAMP
+              - column:
+                  name: name
+                  type: VARCHAR(255)
